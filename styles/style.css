@@ -1,0 +1,454 @@
+:root {
+    --gold: #dac598;
+    --background: #000;
+    --text: #fff;
+    --accent: #f50c0c;
+}
+
+
+
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: var(--text);
+    background-color: var(--background);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Background video - bron: https://blog.hubspot.com/website/video-background-css */
+.bg-plants {
+    opacity: 70%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+
+}
+
+.bg-plants video {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+/* Logo */
+h1 img {
+    max-width: 100%;
+    align-self: center;
+}
+
+
+.cover-release {
+    /* Bron: Iris van Willegen */
+    width: 100%;
+    height: 50dvh;
+    background-image: url(/images/keyart_pc.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+h1 {
+    padding: 1em;
+}
+
+
+.cover-release .release-date {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.cover-sentence p {
+    font-size: 1.4em;
+    text-align: center;
+    text-shadow: 0 0 4px var(--accent), 0 0 12px var(--accent);
+    padding: 2em;
+}
+
+
+.konami-logo {
+    height: 40px;
+    width: auto;
+    margin-top: 0.4em;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 53px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    display: none;
+    z-index: 1000;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+.menu-toggle {
+    width: 1em;
+    height: 1em;
+    margin: 0 3rem 0 auto;
+    z-index: 1000;
+    background: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+
+}
+
+.menu-toggle img {
+    width: 2em;
+    height: 2em;
+}
+
+
+/*Platforms*/
+
+.platform h2 {
+    text-align: center;
+}
+
+.platform ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    padding: 1em;
+    list-style: none;
+}
+
+.platform li {
+    text-align: center;
+}
+
+.platform img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+/*News section*/
+
+.news {
+    max-width: 35em;
+    margin: 0 auto;
+}
+
+.news ol {
+    max-height: 19em;
+    overflow-y: auto;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.news li {
+    padding: 1em 0;
+    border-bottom: 0.063em solid #9f9f9f;
+}
+
+.news time {
+    display: block;
+    color: var(--gold);
+    margin-bottom: 0.25em;
+}
+
+.news a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+/* scroll bar */
+.news ol::-webkit-scrollbar {
+    width: 0.4em;
+}
+
+.news ol::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+.news ol::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 0.25em;
+}
+
+/* video gallery */
+
+.videoGallery h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 3em;
+    border-bottom: 0.063em solid var(--gold);
+    padding-bottom: 0.5em;
+}
+
+.videoGallery ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.videoGallery li {
+    width: 100%;
+    max-width: 40em;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+.videoGallery a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.videoGallery a img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5em;
+}
+
+.videoGallery p {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--text);
+    margin-bottom: 1em;
+}
+
+/*story */
+
+.story {
+    margin: 0 auto;
+    padding: 1.7em;
+    color: var(--text);
+    font-size: 2em;
+    line-height: 1.7;
+    background-color: var(--background);
+}
+
+.story h2 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    border-bottom: 0.063em solid var(--gold);
+    padding-bottom: 0.5em;
+}
+
+/* Source: ChatGPT 5 - Prompt: How to make background image bleed into the edges */
+.story-block {
+    background-size: cover;
+    background-position: center;
+    padding: 2em;
+    margin: 0 0 2em 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.story p {
+    text-shadow: 1px 1px 2px var(--background);
+    margin: 2em;
+}
+
+/* backgrounds of each text block */
+.story-block:nth-of-type(1) {
+    background-image: url("../images/bg_story_1.webp");
+}
+
+.story-block:nth-of-type(2) {
+    background-image: url("../images/bg_story_2.webp");
+}
+
+.story-block:nth-of-type(3) {
+    background-image: url("../images/bg_story_3.webp");
+}
+
+/* characters */
+
+.characters {
+    max-width: 60em;
+    margin: 0 auto;
+    color: var(--text);
+    background-color: var(--background);
+}
+
+.characters h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    border-bottom: 0.063em solid var(--gold);
+    padding-bottom: 0.5em;
+}
+
+.characters ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.characters li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2em;
+    margin-bottom: 2em;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.characters li img {
+    width: 12em;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.characters li h3 {
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    color: var(--gold);
+}
+
+.characters p {
+    font-size: 1.4em;
+    line-height: 1.8;
+}
+
+.characters li:nth-of-type(1) {
+    background-image: url("../images/character_hinako_portrait.png");
+}
+
+.characters li:nth-of-type(2) {
+    background-image: url("../images/character_shuu_portrait.png");
+}
+
+.characters li:nth-of-type(3) {
+    background-image: url("../images/character_rinko_portrait.png");
+}
+
+.characters li:nth-of-type(4) {
+    background-image: url("../images/character_sakuko_portrait.png");
+}
+
+/*monsters*/
+
+.monsters {
+    max-width: 60em;
+    margin: 0 auto;
+    color: var(--text);
+}
+
+.monsters h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    border-bottom: 0.063em solid var(--gold);
+    padding-bottom: 0.5em;
+}
+
+.monsters ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.monsters li {
+    text-align: center;
+}
+
+.monsters li img {
+    width: 100%;
+    max-width: 20em;
+    margin-bottom: 0.5em;
+}
+
+.monsters li h3 {
+    font-size: 1.5em;
+    color: var(--gold);
+}
+
+/* gallery */
+
+.gallery {
+    max-width: 70em;
+    margin: 0 auto;
+    color: var(--text);
+}
+
+.gallery h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 1.5em;
+    border-bottom: 0.063em solid var(--gold);
+    padding-bottom: 0.5em;
+}
+
+.gallery ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 1em;
+}
+
+
+.gallery li img {
+    width: 100%;
+    height: auto;
+}
+
+.warning {
+    width: 30em;
+    display: flex;
+    flex-direction: column;
+}
